@@ -24,11 +24,11 @@ Users should be able to:
 
 ### Screenshot
 
-![img](./screenshot.jpg)
+![Screenshot 2024-11-11 at 23-35-12 Frontend Mentor Blog preview card](https://github.com/user-attachments/assets/db809059-11ca-4f03-b517-13697eeb8f1f)
 
 ### Links
 
-- Solution URL: [Code](https://github.com/Basselfathy/Frontend-Mentor-Blog-Preview-Card-Challenge//)
+- Solution URL: [Code](https://github.com/Basselfathy/Frontend-Mentor-Blog-Preview-Card-Challenge/)
 - Live Site URL: [Blog review card](https://basselfathy.github.io/Frontend-Mentor-Blog-Preview-Card-Challenge/)
 
 ## My process
