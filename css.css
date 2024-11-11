@@ -1,0 +1,176 @@
+/* Variables */
+:root {
+    /**** color ****/
+    --color-gray-500: rgb(107 107 107);
+    --color-gray-950: rgb(17 17 17);
+    --color-white: rgb(255 255 255);
+    --color-yellow: rgb(244 208 78);
+    /**** Fonts ****/
+    /* Font-sizes */
+    --font-size-text-preset-3: 0.875rem;
+    --font-size-text-preset-2: 1rem;
+    --font-size-text-preset-1: 1.5rem;
+    --font-size-text-preset-1-mobile:1.25rem;
+    /* Font-weights*/
+    --fw-md: 500;
+    --fw-xb: 800;
+    /**** Spacings ****/
+    --spacing-50: 0.25rem;
+    --spacing-100: 0.5rem;
+    --spacing-150: 0.75rem;
+    --spacing-200: 1.5rem;
+}
+
+/* general reset */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+/* 2. Remove default margin */
+* {
+	margin: 0;
+    padding: 0;
+}
+body {
+	/* 3. Add accessible line-height */
+	line-height: 1.5;
+	/* 4. Improve text rendering */
+	-webkit-font-smoothing: antialiased;
+}
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+/* 8. Improve line wrapping */
+p {
+	text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+
+/* styles */
+body{
+    background-color: var(--color-yellow);
+    font-family: "Figtree", serif;
+    color: var(--color-gray-950);
+}
+
+main{
+    display: grid;
+	justify-content: center;
+    align-items: end;
+	height: 100vh;
+}
+
+.card{
+    display: grid;
+    gap: var(--spacing-200);
+    max-width: 24rem;
+    background-color: var(--color-white);
+    border: solid 1px var(--color-gray-950);
+    border-radius: 1.25rem;
+    padding: var(--spacing-200);
+    -webkit-box-shadow: 8px 8px 0px 0px var(--color-gray-950);
+    -moz-box-shadow: 8px 8px 0px 0px var(--color-gray-950);
+    box-shadow: 8px 8px 0px 0px var(--color-gray-950);
+    transition: box-shadow 400ms ease;
+}
+
+.card:hover {
+    box-shadow: 16px 16px 0px 0px var(--color-gray-950); 
+}
+
+.card__img{
+    border-radius: 0.625rem;
+}
+
+.card__content{
+    display: grid;
+    gap: var(--spacing-100);
+}
+
+.card__content .blog__type{
+    justify-self: start;
+    background-color: var(--color-yellow);
+    padding: var(--spacing-50) var(--spacing-150);
+    border-radius: var(--spacing-50);
+    font-size: var(--font-size-text-preset-3);
+    font-weight: var(--fw-xb);
+}
+
+.blog__publish_date{
+    font-size: var(--font-size-text-preset-3);
+    font-weight: var(--fw-md);
+}
+
+.blog__title{
+    font-size: var(--font-size-text-preset-1);
+    font-weight: var(--fw-xb);
+    transition: color 400ms ease;
+}
+
+.blog__title:hover{
+    color: var(--color-yellow);
+    cursor: pointer;
+}
+
+.blog__desc{
+    font-size: var(--font-size-text-preset-2);
+    font-weight: var(--fw-md);
+    color: var(--color-gray-500);
+}
+
+.blog__author{
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-150);
+}
+
+.blog__author__avatar{
+    max-width: 2rem;
+}
+
+.blog__author__name{
+    font-size: var(--font-size-text-preset-3);
+    font-weight: var(--fw-xb);
+}
+
+/* media queries */
+@media screen and (max-width: 375px) {
+	main{
+		padding-inline: var(--spacing-200);
+	}
+    h1.blog__title{
+        font-size: var(--font-size-text-preset-1-mobile);
+    }
+}
